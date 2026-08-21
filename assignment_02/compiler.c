@@ -51,11 +51,10 @@ void compile(const char *source_file, const char *program_file)
         return;
     }
 
-    /* ============================================================
-     * FIRST PASS
-     *
-     * Find all labels and calculate their byte addresses.
-     * ============================================================
+    /* ======
+      FIRST PASS
+     
+      Find all labels and calculate their byte addresses.
      */
 
     FILE *pass1 = fopen(source_file, "r");
@@ -168,7 +167,7 @@ void compile(const char *source_file, const char *program_file)
 
            Read x1, 0
 
-           Opcode = 0x05
+           Opcode = 0x0D
            ===================================================== */
 
         if (sscanf(line, "Read x%d, %d", &dest, &constant) == 2)
@@ -188,7 +187,7 @@ void compile(const char *source_file, const char *program_file)
 
            Write x1, 20
 
-           Opcode = 0x06
+           Opcode = 0x0E
            ===================================================== */
 
         if (sscanf(line, "Write x%d, %d", &dest, &constant) == 2)
