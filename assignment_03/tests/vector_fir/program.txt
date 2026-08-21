@@ -1,0 +1,59 @@
+% 8-tap FIR using vector multiply.
+% Data[0] = N
+% Data[4..35] = 8 weights
+% Data[36..] = input array
+% Output starts at 0x100 (256)
+% The assignment specifies k < N-8.
+
+x1 = [0]       % N
+v0 = [4]       % 8 weights
+x2 = 36        % input[k]
+x3 = 255       % build output base 0x100 (256)
+x18 = 1
+x3 = x3 + x18
+x4 = 255       % build temporary address 512
+x7 = 255
+x4 = x4 + x7
+x4 = x4 + 2
+x5 = 0         % k
+x6 = x1 - 8    % number of FIR outputs = N-8
+
+.loop
+x8 = x5 - x6
+BEQ .exit
+
+v1 = [x2]      % input[k .. k+7]
+v2 = v1 * v0  % element-wise multiplication
+[x4] = v2     % temporary product array
+
+x9 = [x4]
+x10 = x4 + 4
+x11 = [x10]
+x10 = x10 + 4
+x12 = [x10]
+x10 = x10 + 4
+x13 = [x10]
+x10 = x10 + 4
+x14 = [x10]
+x10 = x10 + 4
+x15 = [x10]
+x10 = x10 + 4
+x16 = [x10]
+x10 = x10 + 4
+x17 = [x10]
+
+x9 = x9 + x11
+x9 = x9 + x12
+x9 = x9 + x13
+x9 = x9 + x14
+x9 = x9 + x15
+x9 = x9 + x16
+x9 = x9 + x17
+
+[x3] = x9
+x2 = x2 + 4
+x3 = x3 + 4
+x5 = x5 + 1
+BAL .loop
+
+.exit

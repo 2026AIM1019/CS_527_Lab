@@ -1,0 +1,12 @@
+Test 05: 3-tap FIR filter
+Formula: y[n] = x[n] + 2*x[n-1] + x[n-2]
+N = 3
+Input samples: 10,20,30
+Expected outputs:
+y[0] = 10
+y[1] = 40
+y[2] = 80
+Output starts at Data[16]:
+Data[16] = 10 -> 0A 00 00 00
+Data[20] = 40 -> 28 00 00 00
+Data[24] = 80 -> 50 00 00 00

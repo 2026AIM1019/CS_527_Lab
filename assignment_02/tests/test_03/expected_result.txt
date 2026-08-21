@@ -1,0 +1,7 @@
+Test 03: Determinant of 3x3 matrix
+Matrix:
+3 1 2
+1 5 1
+2 1 4
+Expected determinant: 37
+Final 32-bit value at Data[36]: 37 -> 25 00 00 00

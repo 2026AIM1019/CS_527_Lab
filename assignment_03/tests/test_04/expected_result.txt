@@ -1,0 +1,5 @@
+Test 04: Runtime N sum
+Data[0] contains N = 5
+Numbers at addresses 4,8,12,16,20: 10,20,30,40,50
+Expected sum: 150
+Final 32-bit value at Data[24]: 150 -> 96 00 00 00
