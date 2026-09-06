@@ -299,49 +299,49 @@ int branch_condition(int opcode)
 {
     switch (opcode)
     {
-    case 0x10: // BEQ
+    case 0x10: // BEQ : Branch if equal
         return Z == 1;
 
-    case 0x11: // BNE
+    case 0x11: // BNE : Branch if not equal
         return Z == 0;
 
-    case 0x12: // BCS
+    case 0x12: // BCS : Branch if carry set
         return C == 1;
 
-    case 0x13: // BCC
+    case 0x13: // BCC : Branch if carry clear
         return C == 0;
 
-    case 0x14: // BMI
+    case 0x14: // BMI : Branch if negative
         return N == 1;
 
-    case 0x15: // BPL
+    case 0x15: // BPL : Branch if positive
         return N == 0;
 
-    case 0x16: // BVS
+    case 0x16: // BVS : Branch if overflow set
         return V == 1;
 
-    case 0x17: // BVC
+    case 0x17: // BVC : Branch if overflow clear
         return V == 0;
 
-    case 0x18: // BHI
+    case 0x18: // BHI : Branch if higher
         return C == 1 && Z == 0;
 
-    case 0x19: // BLS
+    case 0x19: // BLS : Branch if lower or same
         return C == 0 || Z == 1;
 
-    case 0x1A: // BGE
+    case 0x1A: // BGE : Branch if greater or equal
         return N == V;
 
-    case 0x1B: // BLT
+    case 0x1B: // BLT : Branch if less than
         return N != V;
 
-    case 0x1C: // BGT
+    case 0x1C: // BGT : Branch if greater than
         return Z == 0 && N == V;
 
-    case 0x1D: // BLE
+    case 0x1D: // BLE : Branch if less than or equal
         return Z == 1 || N != V;
 
-    case 0x1E: // BAL
+    case 0x1E: // BAL : Branch always
         return 1;
 
     default:
@@ -918,7 +918,7 @@ void execute()
      */
 
     printf(
-        "FLAGS -> Z=%d N=%d C=%d V=%d\n",
+        "FLAGS -> Z=%d N=%d C=%d V=%d\n\n",
         Z,
         N,
         C,

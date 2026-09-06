@@ -5,11 +5,7 @@
 #include "processor.h"
 #include "memory.h"
 
-/*
- * ============================================================
- * PROCESSOR REGISTERS
- * ============================================================
- */
+//  PROCESSOR REGISTERS
 
 int32_t Register[256];
 

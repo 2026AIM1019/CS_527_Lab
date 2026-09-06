@@ -175,12 +175,12 @@ void write_memory_32(int address, int32_t value)
  * ============================================================
  */
 
-void finalize()
+void finalize(const char *data_file)
 {
     FILE *fp;
 
 
-    fp = fopen("data.byte", "w");
+    fp = fopen(data_file, "w");
 
     if (fp == NULL)
     {

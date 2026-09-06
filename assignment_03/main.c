@@ -6,6 +6,7 @@
 #include "memory.h"
 #include "processor.h"
 
+// create a new filename in the same directory as another file.
 static void make_sibling_path(const char *source, const char *name,
                               char *out, size_t out_size)
 {

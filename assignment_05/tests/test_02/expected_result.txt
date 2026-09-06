@@ -1,0 +1,4 @@
+Test 02: Complex multiplication
+(10 + 5i) * (9 + 4i) = 70 + 85i
+Final real part at Data[16]: 70 -> 46 00 00 00
+Final imaginary part at Data[20]: 85 -> 55 00 00 00

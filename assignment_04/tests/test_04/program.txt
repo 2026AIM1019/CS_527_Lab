@@ -1,0 +1,21 @@
+% Test 4: Sum of N numbers where N is given at run time
+% Data[0] = N, Data[4], Data[8], ... are the numbers
+% Final sum is stored at Data[24]
+
+x1 = 0      % index
+x2 = [0]    % N
+x3 = 4      % current input address
+x4 = 0      % sum
+
+.loop
+x5 = x1 - x2
+BEQ .exit
+
+x6 = [x3]
+x4 = x4 + x6
+x3 = x3 + 4
+x1 = x1 + 1
+BAL .loop
+
+.exit
+[24] = x4

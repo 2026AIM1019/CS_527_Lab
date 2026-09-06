@@ -1,2 +1,13 @@
+# Executable file
+executable
+
+# Object files
+*.o
+
+# OCaml bytecode executable
+program.byte
+
+# Log file
+process.log
 *.o
 Practice/

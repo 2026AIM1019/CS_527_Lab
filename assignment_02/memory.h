@@ -8,7 +8,7 @@ extern char Data[4096];
 
 void initialize(const char *program_file, const char *data_file);
 
-void finalize();
+void finalize(const char *data_file);
 
 int32_t read_memory_32(int address);
 
