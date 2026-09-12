@@ -1,0 +1,4 @@
+x1 = 42
+Print x1
+x2 = 255
+Print x2

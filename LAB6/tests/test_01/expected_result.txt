@@ -1,0 +1,5 @@
+Test 01: Sum of 4 fixed numbers
+Inputs: 10, 5, 15, 25
+Expected sum: 55
+Final 32-bit value at Data[16]: 55
+Little-endian bytes at Data[16..19]: 37 00 00 00

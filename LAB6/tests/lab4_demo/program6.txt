@@ -1,0 +1,7 @@
+x1 = 0
+x2 = 30
+.loop
+x1 = x1 + 1
+x3 = x1 - x2
+BNE .loop
+Print x1

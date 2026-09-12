@@ -1,0 +1,14 @@
+% Lab 5 MMU page-boundary test
+% Store/read across the 512-byte logical page boundary.
+x1 = 123
+x2 = 200
+x3 = 255
+x4 = x3 + 1
+x5 = x4 + 252
+x6 = x5 + 4
+[x5] = x1
+[x6] = x2
+x7 = [x5]
+x8 = [x6]
+Print x7
+Print x8
