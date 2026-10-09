@@ -1,0 +1,12 @@
+1 x1 = 0      % index
+1 x2 = [0]    % N
+1 x3 = 4      % current input address
+1 x4 = 0      % sum
+6 x5 = x1 - x2
+6 BEQ .exit
+5 x6 = [x3]
+5 x4 = x4 + x6
+5 x3 = x3 + 4
+5 x1 = x1 + 1
+5 BAL .loop
+1 [24] = x4

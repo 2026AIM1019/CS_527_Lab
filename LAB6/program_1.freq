@@ -1,0 +1,8 @@
+1 Read x1, 0
+1 Read x2, 4
+1 Read x3, 8
+1 Read x4, 12
+1 x5 = x1 + x2
+1 x6 = x3 + x4
+1 x7 = x5 + x6
+1 Write x7, 16
