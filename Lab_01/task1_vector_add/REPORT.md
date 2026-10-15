@@ -19,24 +19,69 @@ Each timed implementation is warmed up once. The displayed time is the median of
 ## Results to record
 Copy the timing output from your own machine. Do not compare timings collected on different machines as if they were directly equivalent.
 
-| N | Serial time (s) | Threads | Parallel time (s) | Correct? | Speedup (serial / parallel) |
-|---:|---:|---:|---:|:---:|---:|
-| 100,000 | ___ | 1 | ___ | ___ | ___ |
-| 100,000 | ___ | 2 | ___ | ___ | ___ |
-| 100,000 | ___ | 4 | ___ | ___ | ___ |
-| 100,000 | ___ | 8 | ___ | ___ | ___ |
-| 1,000,000 | ___ | 1 | ___ | ___ | ___ |
-| 1,000,000 | ___ | 2 | ___ | ___ | ___ |
-| 1,000,000 | ___ | 4 | ___ | ___ | ___ |
-| 1,000,000 | ___ | 8 | ___ | ___ | ___ |
-| 10,000,000 | ___ | 1 | ___ | ___ | ___ |
-| 10,000,000 | ___ | 2 | ___ | ___ | ___ |
-| 10,000,000 | ___ | 4 | ___ | ___ | ___ |
-| 10,000,000 | ___ | 8 | ___ | ___ | ___ |
-| 100,000,000 | ___ | 1 | ___ | ___ | ___ |
-| 100,000,000 | ___ | 2 | ___ | ___ | ___ |
-| 100,000,000 | ___ | 4 | ___ | ___ | ___ |
-| 100,000,000 | ___ | 8 | ___ | ___ | ___ |
+Copy and paste this into your GitHub `README.md` file. The tables will render correctly in GitHub Markdown.
+
+Writing
+
+# Performance Benchmark Results
+
+## N = 100,000
+
+**Serial Median Time:** `0.000517328 s`\
+**Correctness Check:** PASS
+
+| Threads | Parallel Time (s) | Check | Speedup |
+| --- | --- | --- | --- |
+| 1 | 0.000480612 | PASS | 1.076× |
+| 2 | 0.000194981 | PASS | 2.653× |
+| 4 | 0.000604564 | PASS | 0.856× |
+| 8 | 0.000507312 | PASS | 1.020× |
+
+## N = 1,000,000
+
+**Serial Median Time:** `0.003 s`\
+**Correctness Check:** PASS
+
+| Threads | Parallel Time (s) | Check | Speedup |
+| --- | --- | --- | --- |
+| 1 | 0.003058180 | PASS | 0.934× |
+| 2 | 0.003182990 | PASS | 0.897× |
+| 4 | 0.005641044 | PASS | 0.506× |
+| 8 | 0.003726034 | PASS | 0.766× |
+
+## N = 10,000,000
+
+**Serial Median Time:** `0.026 s`\
+**Correctness Check:** PASS
+
+| Threads | Parallel Time (s) | Check | Speedup |
+| --- | --- | --- | --- |
+| 1 | 0.026286978 | PASS | 0.986× |
+| 2 | 0.024089987 | PASS | 1.075× |
+| 4 | 0.022067707 | PASS | 1.174× |
+| 8 | 0.021908005 | PASS | 1.183× |
+
+## N = 100,000,000
+
+**Serial Median Time:** `0.215 s`\
+**Correctness Check:** PASS
+
+| Threads | Parallel Time (s) | Check | Speedup |
+| --- | --- | --- | --- |
+| 1 | 0.224104421 | PASS | 0.958× |
+| 2 | 0.255974220 | PASS | 0.839× |
+| 4 | 0.191830040 | PASS | 1.120× |
+| 8 | 0.221352437 | PASS | 0.970× |
+
+## Summary
+
+- **Correctness:** All benchmark configurations passed the correctness check.
+- **Best observed speedup:** `2.653×` with 2 threads at `N = 100,000`.
+- **Best speedup for N = 10,000,000:** `1.183×` with 8 threads.
+- **Best speedup for N = 100,000,000:** `1.120×` with 4 threads.
+- **Scalability:** Parallel performance varies with input size and thread count. Larger inputs show modest speedups, while smaller inputs may incur parallelization overhead.
+
+**Note:** A speedup greater than `1.0×` indicates an improvement over the serial execution time, while a speedup below `1.0×` indicates slower execution.
 
 ## Questions and answers
 
