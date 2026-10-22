@@ -1,0 +1,47 @@
+
+========== CS527 OpenMP Lab 8 ==========
+1. Task 1 - Array Search
+2. Task 2 - Array Sorting
+3. Task 3 - Histogram Calculation
+4. Task 4 - Matrix Transpose
+5. Task 5 - 2D Convolution
+0. Exit
+Choose one task to run: 
+Task 4: Matrix Transpose (row-major storage)
+collapse(2) distributes independent (row, column) pairs; each output cell has one writer.
+
+Matrix size: 256 x 256
+Serial transpose median time: 0.000083151 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.000126649         0.657         0.657          PASS
+2             0.000049498         1.680         0.840          PASS
+4             0.000102030         0.815         0.204          PASS
+8             0.000143736         0.578         0.072          PASS
+
+Matrix size: 1024 x 1024
+Serial transpose median time: 0.006417856 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.006859871         0.936         0.936          PASS
+2             0.002365611         2.713         1.356          PASS
+4             0.002918211         2.199         0.550          PASS
+8             0.002739750         2.342         0.293          PASS
+
+Matrix size: 2048 x 2048
+Serial transpose median time: 0.025989243 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.031538752         0.824         0.824          PASS
+2             0.016635839         1.562         0.781          PASS
+4             0.013399008         1.940         0.485          PASS
+8             0.009723366         2.673         0.334          PASS
+
+========== CS527 OpenMP Lab 8 ==========
+1. Task 1 - Array Search
+2. Task 2 - Array Sorting
+3. Task 3 - Histogram Calculation
+4. Task 4 - Matrix Transpose
+5. Task 5 - 2D Convolution
+0. Exit
+Choose one task to run: Exiting CS527 OpenMP Lab 8.

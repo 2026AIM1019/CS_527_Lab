@@ -1,0 +1,51 @@
+
+========== CS527 OpenMP Lab 8 ==========
+1. Task 1 - Array Search
+2. Task 2 - Array Sorting
+3. Task 3 - Histogram Calculation
+4. Task 4 - Matrix Transpose
+5. Task 5 - 2D Convolution
+0. Exit
+Choose one task to run: 
+Task 1: Array Search
+OpenMP reduction(min:...) returns the first matching index; n means not found.
+
+Array size: 1000000, target: -777777
+Serial result: FOUND, index = 999999, median time = 0.000182847 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.000568521         0.322         0.322          PASS
+2             0.000322448         0.567         0.284          PASS
+4             0.000321687         0.568         0.142          PASS
+8             0.000383430         0.477         0.060          PASS
+Absent-target check (4 threads): PASS
+
+Array size: 5000000, target: -777777
+Serial result: FOUND, index = 4999999, median time = 0.000935737 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.003014935         0.310         0.310          PASS
+2             0.002849416         0.328         0.164          PASS
+4             0.002195184         0.426         0.107          PASS
+8             0.001933318         0.484         0.061          PASS
+Absent-target check (4 threads): PASS
+
+Array size: 10000000, target: -777777
+Serial result: FOUND, index = 9999999, median time = 0.001819104 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.006031885         0.302         0.302          PASS
+2             0.003063790         0.594         0.297          PASS
+4             0.002905270         0.626         0.157          PASS
+8             0.003671561         0.495         0.062          PASS
+Absent-target check (4 threads): PASS
+Index convention: zero-based; if a value appears more than once, the smallest index is returned.
+
+========== CS527 OpenMP Lab 8 ==========
+1. Task 1 - Array Search
+2. Task 2 - Array Sorting
+3. Task 3 - Histogram Calculation
+4. Task 4 - Matrix Transpose
+5. Task 5 - 2D Convolution
+0. Exit
+Choose one task to run: Exiting CS527 OpenMP Lab 8.

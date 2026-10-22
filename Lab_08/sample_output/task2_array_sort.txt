@@ -1,0 +1,49 @@
+
+========== CS527 OpenMP Lab 8 ==========
+1. Task 1 - Array Search
+2. Task 2 - Array Sorting
+3. Task 3 - Histogram Calculation
+4. Task 4 - Matrix Transpose
+5. Task 5 - 2D Convolution
+0. Exit
+Choose one task to run: 
+Task 2: Parallel Array Sorting (task-parallel merge sort)
+OpenMP tasks sort disjoint halves; taskwait is required before merging them.
+The merge itself writes disjoint ranges, so no lock is needed.
+
+Array size: 100000
+Serial sort median time: 0.005327147 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.005925174         0.899         0.899          PASS
+2             0.003336904         1.596         0.798          PASS
+4             0.003015867         1.766         0.442          PASS
+8             0.002884819         1.847         0.231          PASS
+
+Array size: 500000
+Serial sort median time: 0.031979390 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.032843700         0.974         0.974          PASS
+2             0.019281371         1.659         0.829          PASS
+4             0.016544145         1.933         0.483          PASS
+8             0.016779927         1.906         0.238          PASS
+
+Array size: 1000000
+Serial sort median time: 0.063278021 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.071257973         0.888         0.888          PASS
+2             0.044359717         1.426         0.713          PASS
+4             0.035830921         1.766         0.442          PASS
+8             0.040242927         1.572         0.197          PASS
+Verification compares the complete parallel output against sort's serial result.
+
+========== CS527 OpenMP Lab 8 ==========
+1. Task 1 - Array Search
+2. Task 2 - Array Sorting
+3. Task 3 - Histogram Calculation
+4. Task 4 - Matrix Transpose
+5. Task 5 - 2D Convolution
+0. Exit
+Choose one task to run: Exiting CS527 OpenMP Lab 8.

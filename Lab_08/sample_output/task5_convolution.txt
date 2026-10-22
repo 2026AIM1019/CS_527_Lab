@@ -1,0 +1,64 @@
+
+========== CS527 OpenMP Lab 8 ==========
+1. Task 1 - Array Search
+2. Task 2 - Array Sorting
+3. Task 3 - Histogram Calculation
+4. Task 4 - Matrix Transpose
+5. Task 5 - 2D Convolution
+0. Exit
+Choose one task to run: 
+Task 5: 2D Convolution (3 x 3 averaging kernel)
+Valid convolution uses no padding; output dimensions are (rows - 2) x (columns - 2).
+Each output pixel is independent, so the parallel loop needs no critical section.
+
+5 x 5 example input:
+   10.00   20.00   30.00   40.00   50.00
+   60.00   70.00   80.00   90.00  100.00
+  110.00  120.00  130.00  140.00  150.00
+  160.00  170.00  180.00  190.00  200.00
+  210.00  220.00  230.00  240.00  250.00
+Expected 3 x 3 output:
+   70.00   80.00   90.00
+  120.00  130.00  140.00
+  170.00  180.00  190.00
+Parallel example output (4 threads):
+   70.00   80.00   90.00
+  120.00  130.00  140.00
+  170.00  180.00  190.00
+Example correctness: PASS
+
+Image size: 128 x 128, output: 126 x 126
+Serial convolution median time: 0.000057781 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.000093137         0.620         0.620          PASS
+2             0.000095991         0.602         0.301          PASS
+4             0.000130135         0.444         0.111          PASS
+8             0.000118377         0.488         0.061          PASS
+
+Image size: 512 x 512, output: 510 x 510
+Serial convolution median time: 0.001025844 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.001946402         0.527         0.527          PASS
+2             0.001330342         0.771         0.386          PASS
+4             0.001303700         0.787         0.197          PASS
+8             0.000899385         1.141         0.143          PASS
+
+Image size: 1024 x 1024, output: 1022 x 1022
+Serial convolution median time: 0.005699837 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.008748321         0.652         0.652          PASS
+2             0.003183739         1.790         0.895          PASS
+4             0.004895150         1.164         0.291          PASS
+8             0.004015987         1.419         0.177          PASS
+
+========== CS527 OpenMP Lab 8 ==========
+1. Task 1 - Array Search
+2. Task 2 - Array Sorting
+3. Task 3 - Histogram Calculation
+4. Task 4 - Matrix Transpose
+5. Task 5 - 2D Convolution
+0. Exit
+Choose one task to run: Exiting CS527 OpenMP Lab 8.

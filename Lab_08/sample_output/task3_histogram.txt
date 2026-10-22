@@ -1,0 +1,50 @@
+
+========== CS527 OpenMP Lab 8 ==========
+1. Task 1 - Array Search
+2. Task 2 - Array Sorting
+3. Task 3 - Histogram Calculation
+4. Task 4 - Matrix Transpose
+5. Task 5 - 2D Convolution
+0. Exit
+Choose one task to run: 
+Task 3: Histogram Calculation (values 0 through 9)
+Each thread updates its own 10-bin histogram; private histograms are combined after the parallel loop.
+
+Array size: 1000000
+Serial histogram median time: 0.000457289 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.000477901         0.957         0.957          PASS
+2             0.000823873         0.555         0.278          PASS
+4             0.000627257         0.729         0.182          PASS
+8             0.000455847         1.003         0.125          PASS
+Frequencies: 0=99976 1=99662 2=99408 3=99999 4=100564 5=100173 6=99714 7=100260 8=99999 9=100245
+
+Array size: 10000000
+Serial histogram median time: 0.004439117 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.006520167         0.681         0.681          PASS
+2             0.005978920         0.742         0.371          PASS
+4             0.004930508         0.900         0.225          PASS
+8             0.003263324         1.360         0.170          PASS
+Frequencies: 0=999703 1=999465 2=1001736 3=999176 4=1000299 5=999053 6=999929 7=999922 8=999619 9=1001098
+
+Array size: 50000000
+Serial histogram median time: 0.022906649 s
+Threads      Parallel (s)       Speedup    Efficiency         Check
+-------------------------------------------------------------------
+1             0.022723812         1.008         1.008          PASS
+2             0.040891191         0.560         0.280          PASS
+4             0.024257349         0.944         0.236          PASS
+8             0.016804856         1.363         0.170          PASS
+Frequencies: 0=5002060 1=4997416 2=4999587 3=5002672 4=5001375 5=5002246 6=4999113 7=4999624 8=4996711 9=4999196
+
+========== CS527 OpenMP Lab 8 ==========
+1. Task 1 - Array Search
+2. Task 2 - Array Sorting
+3. Task 3 - Histogram Calculation
+4. Task 4 - Matrix Transpose
+5. Task 5 - 2D Convolution
+0. Exit
+Choose one task to run: Exiting CS527 OpenMP Lab 8.
