@@ -1,0 +1,191 @@
+
+========== CS527 OpenMP Lab 9 ==========
+1. Task 1 - Parallel Merge Sort
+2. Task 2 - Scheduling Strategies
+3. Task 3 - Even/Odd Reductions
+0. Exit
+Choose one task to run: 
+Task 1: Recursive OpenMP task merge sort (cutoff=4096)
+
+N=100000  Serial=0.007455 s
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.011093        0.672          0.672        PASS
+2                0.004707        1.584          0.792        PASS
+4                0.003829        1.947          0.487        PASS
+8                0.003336        2.235          0.279        PASS
+
+N=1000000  Serial=0.088465 s
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.088236        1.003          1.003        PASS
+2                0.049656        1.782          0.891        PASS
+4                0.040080        2.207          0.552        PASS
+8                0.029570        2.992          0.374        PASS
+
+N=10000000  Serial=1.046946 s
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                1.047197        1.000          1.000        PASS
+2                0.519680        2.015          1.007        PASS
+4                0.367994        2.845          0.711        PASS
+8                0.303656        3.448          0.431        PASS
+Task 1 overall: PASS
+
+========== CS527 OpenMP Lab 9 ==========
+1. Task 1 - Parallel Merge Sort
+2. Task 2 - Scheduling Strategies
+3. Task 3 - Even/Odd Reductions
+0. Exit
+Choose one task to run: 
+Task 2: OpenMP static, dynamic(100), guided scheduling
+
+N=100000  Serial=0.005443 s
+schedule(static)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.005457        0.997          0.997        PASS
+2                0.003668        1.484          0.742        PASS
+4                0.003270        1.665          0.416        PASS
+8                0.003168        1.718          0.215        PASS
+schedule(dynamic,100)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.005798        0.939          0.939        PASS
+2                0.002712        2.007          1.004        PASS
+4                0.001471        3.701          0.925        PASS
+8                0.001743        3.123          0.390        PASS
+schedule(guided)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.006351        0.857          0.857        PASS
+2                0.002793        1.948          0.974        PASS
+4                0.001712        3.179          0.795        PASS
+8                0.001549        3.513          0.439        PASS
+
+N=1000000  Serial=0.068184 s
+schedule(static)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.071417        0.955          0.955        PASS
+2                0.035028        1.947          0.973        PASS
+4                0.019301        3.533          0.883        PASS
+8                0.023963        2.845          0.356        PASS
+schedule(dynamic,100)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.070937        0.961          0.961        PASS
+2                0.035486        1.921          0.961        PASS
+4                0.017376        3.924          0.981        PASS
+8                0.014112        4.832          0.604        PASS
+schedule(guided)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.066133        1.031          1.031        PASS
+2                0.040324        1.691          0.845        PASS
+4                0.017495        3.897          0.974        PASS
+8                0.015576        4.377          0.547        PASS
+
+N=10000000  Serial=0.645610 s
+schedule(static)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.665240        0.970          0.970        PASS
+2                0.384676        1.678          0.839        PASS
+4                0.181608        3.555          0.889        PASS
+8                0.191778        3.366          0.421        PASS
+schedule(dynamic,100)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.683543        0.945          0.945        PASS
+2                0.339051        1.904          0.952        PASS
+4                0.196187        3.291          0.823        PASS
+8                0.190987        3.380          0.423        PASS
+schedule(guided)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.630034        1.025          1.025        PASS
+2                0.360371        1.792          0.896        PASS
+4                0.171230        3.770          0.943        PASS
+8                0.213060        3.030          0.379        PASS
+Task 2 overall: PASS
+
+========== CS527 OpenMP Lab 9 ==========
+1. Task 1 - Parallel Merge Sort
+2. Task 2 - Scheduling Strategies
+3. Task 3 - Even/Odd Reductions
+0. Exit
+Choose one task to run: 
+Task 3: Multiple reduction vs block-aggregated atomic updates
+
+N=100000  Serial=0.000030 s; even=50004, odd=49996
+reduction(+:even,odd)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.000034        0.865          0.865        PASS
+2                0.000074        0.404          0.202        PASS
+4                0.000187        0.159          0.040        PASS
+8                0.000346        0.086          0.011        PASS
+atomic (per-block aggregated updates)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.000051        0.581          0.581        PASS
+2                0.000090        0.331          0.165        PASS
+4                0.000258        0.116          0.029        PASS
+8                0.000573        0.052          0.006        PASS
+
+N=1000000  Serial=0.000300 s; even=500049, odd=499951
+reduction(+:even,odd)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.000420        0.714          0.714        PASS
+2                0.000271        1.107          0.554        PASS
+4                0.000398        0.753          0.188        PASS
+8                0.000731        0.410          0.051        PASS
+atomic (per-block aggregated updates)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.000463        0.647          0.647        PASS
+2                0.000325        0.923          0.461        PASS
+4                0.000391        0.767          0.192        PASS
+8                0.000725        0.413          0.052        PASS
+
+N=10000000  Serial=0.003284 s; even=5000499, odd=4999501
+reduction(+:even,odd)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.003303        0.994          0.994        PASS
+2                0.001655        1.984          0.992        PASS
+4                0.001717        1.912          0.478        PASS
+8                0.006770        0.485          0.061        PASS
+atomic (per-block aggregated updates)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.010008        0.328          0.328        PASS
+2                0.003407        0.964          0.482        PASS
+4                0.002296        1.430          0.358        PASS
+8                0.002773        1.184          0.148        PASS
+
+N=100000000  Serial=0.029665 s; even=50004996, odd=49995004
+reduction(+:even,odd)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.030481        0.973          0.973        PASS
+2                0.021865        1.357          0.678        PASS
+4                0.021413        1.385          0.346        PASS
+8                0.015293        1.940          0.242        PASS
+atomic (per-block aggregated updates)
+Threads          Time (s)      Speedup     Efficiency       Check
+-----------------------------------------------------------------
+1                0.043300        0.685          0.685        PASS
+2                0.023696        1.252          0.626        PASS
+4                0.021884        1.356          0.339        PASS
+8                0.019462        1.524          0.191        PASS
+Task 3 overall: PASS
+
+========== CS527 OpenMP Lab 9 ==========
+1. Task 1 - Parallel Merge Sort
+2. Task 2 - Scheduling Strategies
+3. Task 3 - Even/Odd Reductions
+0. Exit
+Choose one task to run: 
