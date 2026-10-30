@@ -1,0 +1,4 @@
+Do it in CPP.
+Make sure code is working correctly and it should look like human writtable.
+Code Should be properly formatted , structured and arranged. and make sure there is no comments.
+Don't do any extra functionality until it's not asked.

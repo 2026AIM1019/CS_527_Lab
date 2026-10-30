@@ -1,0 +1,14 @@
+Location of Folder :- 
+
+/home/rajanjha9235/Documents/IIT_Ropar/Computer System/CS_527_Lab
+
+
+Repository URL :-
+
+https://github.com/2026AIM1019/CS_527_Lab
+
+Create a folder named as Lab_10
+
+git add .
+git commit -m "LAb 10"
+git push
